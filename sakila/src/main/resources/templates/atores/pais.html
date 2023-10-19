@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="https://wwww.w3.org.org/1999/xhtml" xmlns:th="http:thymeleaf.org">
+
+<head th:insert="layout/cabecalho">
+	<meta charset="ISO-8859-1">
+
+	<title>Atores</title>
+</head>
+
+<body>
+	<div th:insert="layout/menu"></div>
+	<h1>Países</h1>
+	
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- thymeleaf tipo texto /declarado aqui no html/ vem do controler      -->
+			<tr th:each="pais : ${pais}">
+				<td th:text="${pais.paisId}"></td>
+				<td th:text="${pais.nomePais}"></td>
+
+			</tr>
+			</tboby>
+	</table>
+</body>
+
+</html>
